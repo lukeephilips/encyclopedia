@@ -13,7 +13,7 @@ get('/') do
   lion_desc = Description.new({:definition => 'a dangerous, roaring thing'})
   lion_desc.save
   lion.add_description(lion_desc)
-
+  
   moose = Word.new({:name => 'Moose'})
   moose.save
   moose_desc = Description.new({:definition => 'a large thing with antlers'})
@@ -48,10 +48,6 @@ get ('/words/:id') do
   erb(:word)
 end
 
-get ('/test') do
-
-  erb(:word_form)
-end
 get ('/add') do
 
   erb(:word_form)
