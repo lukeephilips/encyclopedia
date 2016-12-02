@@ -31,8 +31,6 @@ end
 describe('the add word path', {:type => :feature}) do
   before do
     Word.clear
-
-
   end
   it ('displays the new word') do
     visit('/')
@@ -59,6 +57,7 @@ describe('the add word path', {:type => :feature}) do
 
     click_link('Add definition')
     fill_in('definition', :with => 'a creepy, crawly thing')
+    fill_in('latin', :with => 'some kind of cat')
     click_button('Add')
     expect(page).to have_content('Weasel')
   end
@@ -71,8 +70,8 @@ describe('the add word path', {:type => :feature}) do
 
   click_link('Add definition')
   fill_in('definition', :with => 'a creepy, crawly thing')
+  fill_in('latin', :with => 'some kind of cat')
   click_button('Add')
-  
   expect(page).to have_content('a creepy, crawly thing')
   end
 end

@@ -1,7 +1,11 @@
 <form action="/words/<%= @word.id() %>/definition/new" method="post">
   <div class="form-group">
-    <label for="definition"></label>
+    <label for="definition">Definition:</label>
     <input type="text" name="definition" class="form-control">
   </div>
-  <button type="submit">Add a definition</button>
+  <div class="form-group">
+    <label for="latin">Latin name:</label>
+    <input type="text" name="latin" class="form-control">
+  </div>
+  <button type="submit">Add a description</button>
 </form>
