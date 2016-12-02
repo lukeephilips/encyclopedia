@@ -81,3 +81,21 @@ describe('the add word path', {:type => :feature}) do
   expect(page).to have_content('a creepy, crawly thing')
   end
 end
+describe('the find word path', {:type => :feature}) do
+  before do
+    visit('/')
+    click_link('Find a word')
+  end
+
+  # end
+  it('returns the word if found') do
+    fill_in('find', :with => 'Weasel')
+    click_button('Find')
+    expect(page).to have_content('a creepy, crawly thing')
+  end
+  it('displays no words found page if not found') do
+    fill_in('find', :with => 'Taco')
+    click_button('Find')
+    expect(page).to have_content('no matches')
+  end
+end

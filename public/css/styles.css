@@ -19,6 +19,13 @@ body {
   font-family: RoughTypewriter;
   font-size: 1.5em;
 }
+a {
+  color:darkred;
+  font-size: 1.2em;
+}
+p {
+  font-size: 1.2em;
+}
 .container {
   margin-top: 5%;
 }
@@ -34,9 +41,7 @@ body {
   font-family: RoughTypewriter;
   font-weight: bold;
 }
-a {
-  color:darkred;
-}
+
 #big-pic {
   height: 600px;
 }

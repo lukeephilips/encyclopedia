@@ -37,4 +37,13 @@ class Word
     end
       found_word
   end
+  def self.find_id (search_word)
+    found_id = nil
+    @@words.each do |word|
+      if word.name.eql?(search_word)
+        found_id = word.id()
+      end
+    end
+      found_id
+  end
 end

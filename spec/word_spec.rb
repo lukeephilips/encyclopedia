@@ -35,4 +35,12 @@ describe(Word) do
       expect(@word0.add_description(@dog)[0].definition).to eq 'a furry, barking thing'
     end
   end
+  describe('#find_id') do
+    it('finds an id for a given word') do
+      expect(Word.find_id('Dog')).to eq 1
+    end
+    it('adds a description object to the word object') do
+      expect(@word0.add_description(@dog)[0].definition).to eq 'a furry, barking thing'
+    end
+  end
 end

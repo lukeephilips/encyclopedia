@@ -79,3 +79,17 @@ post('/words/:id/definition/new') do
   @description = Description.all
   erb(:word)
 end
+
+get ('/find') do
+  erb(:find_word)
+end
+post ('/find') do
+  @find_word = params.fetch('find')
+    id = Word.find_id(@find_word)
+    if !id
+      erb(:no_match)
+    else
+    @word = Word.find(id)
+    erb(:word)
+  end
+end

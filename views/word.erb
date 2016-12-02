@@ -1,12 +1,13 @@
+<h4><a href="/">Back home</a></h4>
 <h1><%= @word.name %></h1>
 
 <% @word.description().each do |item| %>
   <img src="<%=item.image %>" alt="test" class='img-rounded'/>
-  <p>Definition: <%= item.definition() %></p>
+
+  <p><br>Definition: <%= item.definition() %></p>
   <p>Latin Name: <%= item.latin() %></p>
 
   <% end %>
 
 
-<h3><a href="/words/<%= @word.id() %>/definition/new">Add definition</a></h3<br>
-<h3><a href="/">Back home</a></h3
+<h4><a href="/words/<%= @word.id() %>/definition/new">Add definition</a></h4>
