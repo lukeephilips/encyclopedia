@@ -5,7 +5,7 @@ class Word
     @name = attributes.fetch(:name)
   end
   def self.all
-    @@words
+    @@words.sort! {| a,b | a.name <=> b.name}
   end
   def save
     @@words.push(self)

@@ -7,7 +7,7 @@
 
 ## Description
 
-_An encyclopedia with words and associated descriptions, using a Ruby Description objects within word objects. Users can add new animals              _
+_An encyclopedia with words and associated descriptions in alpha order, using a Ruby Description objects within word objects. Users can add new animals._
 
 
 _[Link to site.]_
@@ -15,7 +15,7 @@ _[Link to site.]_
 ## Specifications
 
 Users can view words:
-* If user views the encyclopedia, it will display all words with links to their descriptions
+* If user views the encyclopedia, it will display all words in alpha order with links to their descriptions
 
 * If user views an individual word, they can see all properties of that word including a definition
 
