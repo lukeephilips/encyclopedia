@@ -16,17 +16,20 @@ describe('the home path', {:type => :feature}) do
   end
 end
   describe('the individual word path', {:type => :feature}) do
-  before do
-    visit('/')
-    click_link('Lion')
-  end
-  it ('displays the individual word') do
-    # click_link('Lion')
-    expect(page).to have_content('Lion')
-  end
-  it ('displays the individual word') do
-    expect(page).to have_content('a dangerous, roaring thing')
-  end
+    before do
+      visit('/')
+      click_link('Lion')
+    end
+    it ('displays the individual word') do
+      # click_link('Lion')
+      expect(page).to have_content('Lion')
+    end
+    it ('displays the individual word') do
+      expect(page).to have_content('a dangerous, roaring thing')
+    end
+    it ('displays the image') do
+      expect(page).to have_css("img")
+    end
 end
 describe('the add word path', {:type => :feature}) do
   before do
@@ -39,7 +42,6 @@ describe('the add word path', {:type => :feature}) do
     click_button('Add')
     expect(page).to have_content('Weasel')
   end
-
   it('allows user to view add a definition button') do
     visit('/')
     click_link('Add a new word')
@@ -58,9 +60,12 @@ describe('the add word path', {:type => :feature}) do
     click_link('Add definition')
     fill_in('definition', :with => 'a creepy, crawly thing')
     fill_in('latin', :with => 'some kind of cat')
+    fill_in('image', :with => 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Mustela_nivalis_-British_Wildlife_Centre-4.jpg/1280px-Mustela_nivalis_-British_Wildlife_Centre-4.jpg')
+
     click_button('Add')
     expect(page).to have_content('Weasel')
   end
+
   it('allows user to view added definition') do
   visit('/')
   click_link('Add a new word')
@@ -71,6 +76,7 @@ describe('the add word path', {:type => :feature}) do
   click_link('Add definition')
   fill_in('definition', :with => 'a creepy, crawly thing')
   fill_in('latin', :with => 'some kind of cat')
+  fill_in('image', :with => 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Mustela_nivalis_-British_Wildlife_Centre-4.jpg/1280px-Mustela_nivalis_-British_Wildlife_Centre-4.jpg')
   click_button('Add')
   expect(page).to have_content('a creepy, crawly thing')
   end

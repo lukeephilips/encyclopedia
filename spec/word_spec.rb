@@ -8,7 +8,7 @@ describe(Word) do
     Word.clear
     @word0 = Word.new({:name => 'Dog'})
     @word0.save
-    @dog = Description.new(:definition => 'a furry, barking thing', :latin => 'doggeus')
+    @dog = Description.new(:definition => 'a furry, barking thing', :latin => 'doggeus', image:'http://weknowyourdreams.com/images/dog/dog-01.jpg')
     @dog.save
   end
   describe('#initialize') do

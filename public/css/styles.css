@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'RoughTypewriter';
+  font-style: normal;
+  font-weight: normal;
+  src: local('RoughTypewriter'), url('rough_typewriter.otf') format('truetype');
+}
+@font-face {
+  font-family: 'RoughTypewriter';
+  font-style: normal;
+  font-weight: bold;
+  src: local('RoughTypewriter'), url('rough_typewriter-bld-itl.otf') format('truetype');
+}
+
+img {
+  height: 300px;
+}
+body {
+  background-color: #21263a;
+  font-family: RoughTypewriter;
+  font-size: 1.5em;
+}
+.container {
+  margin-top: 5%;
+}
+.jumbotron {
+  font-size: 3em;
+  background-image: url(papyrus.jpg);
+  background-size: 100% 100%;
+  width:
+
+}
+.jumbotron h1{
+  font-size: 1.5em;
+  font-family: RoughTypewriter;
+  font-weight: bold;
+}

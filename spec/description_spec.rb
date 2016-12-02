@@ -4,7 +4,7 @@ require 'pry-nav'
 
 describe(Description) do
   before do
-    @dog = Description.new(:definition => 'a furry, barking thing', :latin => 'doggeus')
+    @dog = Description.new(:definition => 'a furry, barking thing', :latin => 'doggeus', image:'http://weknowyourdreams.com/images/dog/dog-01.jpg')
     @dog.save
   end
   describe('#initialize') do
