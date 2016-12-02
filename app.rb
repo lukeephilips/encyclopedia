@@ -8,24 +8,42 @@ also_reload('lib/**/*.rb')
 
 get('/') do
   Word.clear
-  @lion_desc = Description.new({:definition => 'a dangerous, roaring thing'})
-  @lion_desc.save
-  @lion = Word.new({:name => 'Lion'})
-  @lion.save.add_description(@lion_desc)
-  Word.new({:name => 'Moose'}).save
-  Word.new({:name => 'Dog'}).save
-  Word.new({:name => 'Monkey'}).save
-  Word.new({:name => 'Cat'}).save
-  @words = Word.all
+  lion = Word.new({:name => 'Lion'})
+  lion.save
+  lion_desc = Description.new({:definition => 'a dangerous, roaring thing'})
+  lion_desc.save
+  lion.add_description(lion_desc)
 
+  moose = Word.new({:name => 'Moose'})
+  moose.save
+  moose_desc = Description.new({:definition => 'a large thing with antlers'})
+  moose_desc.save
+  moose.add_description(moose_desc)
 
-  @lion
+  dog = Word.new({:name => 'Dog'})
+  dog.save
+  dog_desc = Description.new({:definition => 'a furry, barking thing'})
+  dog_desc.save
+  dog.add_description(dog_desc)
+
+  monkey = Word.new({:name => 'Monkey'})
+  monkey.save
+  monkey_desc = Description.new({:definition => 'a clever, climbing thing'})
+  monkey_desc.save
+  monkey.add_description(monkey_desc)
+
+  cat = Word.new({:name => 'Cat'})
+  cat.save
+  cat_desc = Description.new({:definition => 'a sneaky, vile thing'})
+  cat_desc.save
+  cat.add_description(cat_desc)
+
+  @words = Word.all()
   erb(:words)
 end
 
 get ('/words/:id') do
   @word = Word.find(params.fetch('id').to_i)
-  # binding.pry
-  # @word.add_description()
+
   erb(:word)
 end
