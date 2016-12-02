@@ -4,7 +4,7 @@ class Word
 
   def initialize (attributes)
     @name = attributes.fetch(:name)
-    @descriptions = []
+    @description = []
     @id = @@words.length+1
   end
 
@@ -16,7 +16,10 @@ class Word
   end
 
   def add_description (description)
-    @descriptions.push(description)
+    @description.push(description)
+  end
+  def description
+    @description
   end
 
   def self.all
