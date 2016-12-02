@@ -1,7 +1,6 @@
 <h1><%= @word.name %></h1>
 
-<p>
-  <% @word.description().each do |item| %>
-  <p><%= item.definition() %></p>
+<p> <% @word.description().each do |item| %>
+  Definition: <%= item.definition() %></p>
   <% end %>
 </p>

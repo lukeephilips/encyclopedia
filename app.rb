@@ -47,3 +47,19 @@ get ('/words/:id') do
 
   erb(:word)
 end
+
+get ('/test') do
+
+  erb(:word_form)
+end
+get ('/add') do
+
+  erb(:word_form)
+end
+
+post ('/add') do
+  new_word = Word.new({:name => params.fetch('name')})
+  new_word.save()
+  @words = Word.all()
+  erb(:words)
+end
