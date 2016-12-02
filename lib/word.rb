@@ -4,14 +4,21 @@ class Word
 
   def initialize (attributes)
     @name = attributes.fetch(:name)
+    @descriptions = []
     @id = @@words.length+1
   end
+
   def save
     @@words.push(self)
   end
   def id
     @id
   end
+
+  def add_description (description)
+    @descriptions.push(description)
+  end
+
   def self.all
     @@words.sort! {| a,b | a.name <=> b.name}
   end
