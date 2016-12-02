@@ -41,7 +41,7 @@ describe('the add word path', {:type => :feature}) do
     expect(page).to have_content('Weasel')
   end
 
-  it('allows user to add a definition') do
+  it('allows user to view add a definition button') do
     visit('/')
     click_link('Add a new word')
     fill_in('name', :with => 'Weasel')
@@ -58,11 +58,22 @@ describe('the add word path', {:type => :feature}) do
     expect(page).to have_content('Weasel')
     click_link('Weasel')
     expect(page).to have_content('Add definition')
+    click_link('Add definition')
     fill_in('definition', :with => 'a creepy, crawly thing')
+    click_button('Add')
     expect(page).to have_content('Weasel')
   end
-  # it('allows user to add definition and route back to word') do
-  #   click_button('Add')
-  #   expect(page).to have_content('Weasel')
-  # end
+  it('allows user to view added definition') do
+    visit('/')
+    click_link('Add a new word')
+    fill_in('name', :with => 'Weasel')
+    click_button('Add')
+    expect(page).to have_content('Weasel')
+    click_link('Weasel')
+    expect(page).to have_content('Add definition')
+    click_link('Add definition')
+    fill_in('definition', :with => 'a creepy, crawly thing')
+    click_button('Add')
+    expect(page).to have_content('a creepy, crawly thing')
+  end
 end

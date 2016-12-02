@@ -1,5 +1,8 @@
 <h1><%= @word.name %></h1>
 
-
+<p> <% @word.description().each do |item| %>
+  Definition: <%= item.definition() %></p>
+  <% end %>
+</p>
 
 <a href="/words/<%= @word.id() %>/definition/new">Add definition</a>

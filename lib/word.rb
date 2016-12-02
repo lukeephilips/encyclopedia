@@ -31,7 +31,7 @@ class Word
   def self.find (identifier)
     found_word = nil
     @@words.each do |word|
-      if word.id.eql?(identifier)
+      if word.id.eql?(identifier.to_i())
         found_word = word
       end
     end

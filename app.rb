@@ -68,3 +68,13 @@ get('/words/:id/definition/new') do
   @word = Word.find(params.fetch('id').to_i)
   erb(:description_form)
 end
+
+post('/words/:id/definition/new') do
+  @word = Word.find(params.fetch('id').to_i)
+  @words = Word.all
+  new_description = Description.new({:definition => params.fetch('definition')})
+  new_description.save
+  @word.add_description(new_description)
+  @description = Description.all
+  erb(:word)
+end
