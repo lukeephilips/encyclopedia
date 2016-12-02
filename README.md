@@ -22,7 +22,7 @@ Users can view words:
 Users can add content:
 
 * Users can add new animals
-* users can add one or multiple of any property
+* users can add one or multiple new property sets
 
 
 ## Instructions:

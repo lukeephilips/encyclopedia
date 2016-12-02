@@ -34,3 +34,9 @@ body {
   font-family: RoughTypewriter;
   font-weight: bold;
 }
+a {
+  color:darkred;
+}
+#big-pic {
+  height: 600px;
+}
