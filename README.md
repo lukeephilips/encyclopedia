@@ -10,7 +10,7 @@
 _An encyclopedia with words and associated descriptions in alpha order, using a Ruby Description objects within word objects. Users can add new animals._
 
 
-_[Link to site.]_
+_Link to site: [https://evening-stream-20970.herokuapp.com/]_
 
 ## Specifications
 
@@ -23,6 +23,10 @@ Users can add content:
 
 * Users can add new animals
 * users can add one or multiple new property sets
+
+Users can find words :
+  * if a word is found, it is displayed
+  * if not, an escape page is shown
 
 
 ## Instructions:
